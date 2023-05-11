@@ -1,4 +1,3 @@
-// Build & Push local docker images inside CDK8s applications
 package cdk8simage
 
 import (

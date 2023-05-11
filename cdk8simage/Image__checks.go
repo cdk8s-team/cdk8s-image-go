@@ -1,6 +1,5 @@
 //go:build !no_runtime_type_checking
 
-// Build & Push local docker images inside CDK8s applications
 package cdk8simage
 
 import (
