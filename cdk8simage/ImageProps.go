@@ -13,6 +13,8 @@ type ImageProps struct {
 	//
 	// Docker convention is {registry_name}/{name}:{tag}
 	// Visit https://docs.docker.com/engine/reference/commandline/tag/ for more information
+	// Default: - auto-generated name.
+	//
 	Name *string `field:"optional" json:"name" yaml:"name"`
 	// Set to specify the target platform for the build output, (for example, linux/amd64, linux/arm64, or darwin/amd64).
 	Platform *string `field:"optional" json:"platform" yaml:"platform"`
@@ -21,11 +23,15 @@ type ImageProps struct {
 	// This will be used as the prefix for the image name.
 	//
 	// For example, if you have a local registry listening on port 500, you can set this to `localhost:5000`.
+	// Default: "docker.io/library"
+	//
 	Registry *string `field:"optional" json:"registry" yaml:"registry"`
 	// Tag for the image.
 	//
 	// Docker convention is {registry_name}/{name}:{tag}
 	// Visit https://docs.docker.com/engine/reference/commandline/tag/ for more information
+	// Default: "latest".
+	//
 	Tag *string `field:"optional" json:"tag" yaml:"tag"`
 }
 
